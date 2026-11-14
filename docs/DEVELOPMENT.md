@@ -9,7 +9,7 @@
 | 운행일지 | `app/src/main/java/com/example/hyundai_sdk/`, `app/src/main/java/triplog/` | Hyundai_SDK v0.14.10 |
 | 로그인 · 메인 | `app/src/main/java/com/hdapp/home/` | 이 프로젝트 |
 
-- 카카오 QR 로그인 만들기(키 발급·서버): [server/kakao-qr/README.md](server/kakao-qr/README.md). 서버가 없으면 시연용 로그인으로 동작
+- 카카오 QR 로그인 만들기(키 발급·서버): [server/kakao-qr/README.md](../server/kakao-qr/README.md). 서버가 없으면 시연용 로그인으로 동작
 - 로그인·로그아웃·주행 기록: 앱 안 `login_history.csv` (`시간,이름,번호,카카오ID,구분,내용`)
 - 로그인한 사람이 운전 점수의 운전자(`이름·번호뒤4자리`)와 운행일지의 기록 주인(`kakao:카카오ID`)이 됩니다
 

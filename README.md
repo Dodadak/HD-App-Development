@@ -1,4 +1,4 @@
-# HDapp
+# 카로그 (HDapp)
 
 Pleos Connect(AAOS) 법인차용 앱. 운전 점수 / 충전 기록 / 운행일지 통합 + 카카오 QR 로그인(mock).
 

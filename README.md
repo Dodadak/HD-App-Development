@@ -23,6 +23,21 @@ adb shell pm grant --user 10 com.hdapp android.car.permission.CAR_SPEED
 - 메인 상단 계정 버튼으로 계정 변경
 - 기어 D → 주행 기록 시작, P → 저장
 
+## Background
+
+로그인 후에는 화면을 안 열어도(다른 앱 사용 중이어도) 3개 기능 모두 기록됨. `DrivingScoreService`(foreground) 하나가 같이 돌림.
+
+| 기능 | 시작 | 끝 |
+|---|---|---|
+| 운전 점수 | 기어 D | 기어 P (자동 저장) |
+| 충전 기록 | Charge Switch On | Off (자동 저장) |
+| 운행일지 | D + 주행거리 증가 | P 5초 → `운행 종료 확인` + 분류는 직접 |
+
+- 재부팅(차 재시동) 시 서비스 자동 시작 → 운행일지는 마지막 로그인 운전자 이름으로 이어서 기록 (`TripLogBackground.resume`)
+- 마지막 운전자는 ID·이름만 저장 (`triplog_background` prefs, 관리자 권한 X)
+- 로그인 화면으로 돌아가도 기록 안 끊김. 다른 사람이 로그인하면 그 사람으로 전환
+- 앞 운행이 종료 확인 전이면 운전자 전환 불가 → 앞 사람 기록 유지
+
 ## Virtual Console
 
 ```bash
@@ -34,6 +49,7 @@ adb forward tcp:8088 tcp:8088
 - 깜빡이 없는 차선 변경: 40km/h 이상에서 Steering Angle ±5° 이상 왕복 (6s 이내)
 - 깜빡이 켠 차선 변경: Turn Signal State → Blink 후 동일 동작 (감점 없음)
 - 충전: Energy → Charge Switch On → SOC 변경 → Off
+- 운행일지: 에뮬레이터 주행거리는 속도로 안 늘어남 → Odometer 슬라이더 직접 올려야 함
 
 콘솔 탭이 백그라운드로 가면 입력이 안 먹음.
 
@@ -53,7 +69,6 @@ adb forward tcp:8088 tcp:8088
 
 - `ai.pleos.playground:Vehicle:2.3.2` — Gear, Brake, TurnSignal, SteeringWheel, EvBattery
 - `ai.pleos.playground:NaviHelper:3.0.5` — speed limit
-- `ai.pleos.playground:TextToSpeech:3.3.1` — voice
 - `android.car` — `PERF_VEHICLE_SPEED`, `ACCELERATOR_PEDAL_COMPRESSION_PERCENTAGE`
 
 ## Known issues
@@ -64,5 +79,6 @@ adb forward tcp:8088 tcp:8088
 - 차선 변경은 steering 기반 추정 (차선 API 없음)
 - 에뮬레이터(API 34)는 accelerator pedal 미지원 → 속도 변화로 판정
 - 데이터는 기기 로컬 저장만 함
+- 로그인 없이 운전하면 운행일지가 마지막 운전자 이름으로 남음 (운전자 오기록 가능)
 
 상세 구조·함수 목록은 [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).

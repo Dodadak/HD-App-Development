@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 메인 화면 "운행일지" 카드 아이콘: 기록판 + 지도 핀 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <path
+        android:pathData="M24,18h40a6,6 0 0,1 6,6v52a6,6 0 0,1 -6,6h-40a6,6 0 0,1 -6,-6v-52a6,6 0 0,1 6,-6z"
+        android:strokeWidth="5"
+        android:strokeColor="#7FDDF2" />
+    <path
+        android:fillColor="#7FDDF2"
+        android:pathData="M36,12h16a4,4 0 0,1 4,4v6h-24v-6a4,4 0 0,1 4,-4z" />
+    <path
+        android:pathData="M28,38h22M28,50h16M28,62h12"
+        android:strokeWidth="5"
+        android:strokeColor="#B8C2CF"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#FFC56B"
+        android:pathData="M64,46c-8.3,0 -15,6.7 -15,15 0,11 15,25 15,25s15,-14 15,-25c0,-8.3 -6.7,-15 -15,-15z" />
+    <path
+        android:fillColor="#0F1A2A"
+        android:pathData="M64,61m-6,0a6,6 0 1,1 12,0a6,6 0 1,1 -12,0" />
+</vector>

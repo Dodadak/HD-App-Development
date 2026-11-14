@@ -1,0 +1,19 @@
+# 빌드 결과물
+build/
+.gradle/
+.kotlin/
+*.iml
+.idea/
+.DS_Store
+
+# 내 PC 설정 (SDK 경로, 관리자 번호, 서버 주소) — 저장소에 올리지 않음
+local.properties
+
+# 키
+*.jks
+*.keystore
+
+# 개발 중 문서 (저장소엔 안 올림)
+*.docx
+*.pptx
+*.hwpx

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature
+        android:name="android.hardware.type.automotive"
+        android:required="true" />
+
+    <!-- Vehicle SDK · Gear, Brake (주행 시작·끝, 브레이크) -->
+    <uses-permission android:name="pleos.car.permission.CAR_DRIVE" />
+    <!-- Android Automotive 차속 (PERF_VEHICLE_SPEED) — 런타임 권한 -->
+    <uses-permission android:name="android.car.permission.CAR_SPEED" />
+    <!-- NaviHelper · onCurrentRoadSpeedLimit (도로 제한속도) -->
+    <uses-permission android:name="pleos.car.permission.NAVI_ROUTE" />
+    <!-- 차선 변경 판정: 깜빡이(TurnSignal) · 핸들 각도(SteeringWheel은 CAR_DRIVE) -->
+    <uses-permission android:name="pleos.car.permission.CAR_LIGHTS" />
+    <!-- 가속 페달 (ACCELERATOR_PEDAL_COMPRESSION_PERCENTAGE) · 운행일지 기어 -->
+    <uses-permission android:name="android.car.permission.CAR_POWERTRAIN" />
+    <!-- 충전 기록 (EvBattery) -->
+    <uses-permission android:name="pleos.car.permission.CAR_ENERGY" />
+    <!-- 앱을 닫아도 주행을 기록하는 백그라운드 서비스 · 알림 · 차가 켜지면 자동 시작 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 카카오 QR 로그인 서버, 이후 보험사 API 연동용 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".home.HdApp"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:label="카로그"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+
+        <!-- 차속을 받는 Car API -->
+        <uses-library
+            android:name="android.car"
+            android:required="false" />
+
+        <!-- 첫 화면: 카카오 QR 로그인. 앱을 다시 열면 늘 이 화면부터 (clearTaskOnLaunch) → 매번 로그인 -->
+        <activity
+            android:name=".home.LoginActivity"
+            android:exported="true"
+            android:label="카로그"
+            android:launchMode="singleTask"
+            android:clearTaskOnLaunch="true"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".home.HomeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".home.ChargeActivity"
+            android:exported="false"
+            android:label="충전 기록" />
+
+        <!-- 운행일지 (팀 파트, com.example.hyundai_sdk) -->
+        <activity
+            android:name="com.example.hyundai_sdk.TripLogActivity"
+            android:exported="false"
+            android:label="운행일지"
+            android:theme="@style/Theme.TripLog.Dark"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".drivingscore.DrivingScoreActivity"
+            android:exported="false"
+            android:label="운전 점수">
+            <!-- 주행 중(기어 D/R)에도 화면을 띄울 수 있게 표시.
+                 없으면 Android Automotive가 "주행 중에는 사용할 수 없습니다"로 막는다.
+                 주행 중 화면은 큰 숫자만 보여주고 조작을 막아 둠 (DrivingView) -->
+            <meta-data
+                android:name="distractionOptimized"
+                android:value="true" />
+        </activity>
+
+        <!-- 주행 기록 (차량 센서를 계속 읽어야 해서 specialUse) -->
+        <service
+            android:name=".drivingscore.DrivingScoreService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="차량 주행 신호(기어·차속)로 운전 점수를 계속 기록" />
+        </service>
+
+        <receiver
+            android:name=".drivingscore.DrivingScoreBootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

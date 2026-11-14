@@ -1,19 +1,46 @@
-# 카로그 (HDapp)
+# 카로그
 
-Pleos Connect(AAOS) 법인차용 앱. 운전 점수 / 충전 기록 / 운행일지 통합 + 카카오 QR 로그인(mock).
+> 법인차 운전자를 위한 업무 비서 — 운전 점수 · 충전 기록 · 운행일지를 로그인 한 번으로 자동 기록하는 Pleos Connect 앱
 
+- 팀: 카로그랩
 - package: `com.hdapp`
 - minSdk 26 / targetSdk 34
 - Kotlin 1.9, Jetpack Compose, Room
+
+## APK
+
+[`apk/카로그랩_카로그_release.apk`](apk/카로그랩_카로그_release.apk) — release 빌드 (심사용, debug 키로 서명)
+
+## Test environment
+
+| 항목 | 값 |
+|---|---|
+| 에뮬레이터 | Pleos Connect v2.1.0 (AVD `Pleos_Connect_v2.1.0`, Android 14 / API 34, arm64-v8a) |
+| 화면 규격 | 2560 × 1440, 160 dpi |
+| 차량 입력 | 에뮬레이터 Virtual Console (`http://127.0.0.1:8088/`) |
+| 빌드 | Android Studio / Gradle 8.7, AGP 8.5, **JDK 17~21** (JDK 26은 빌드 실패) |
+
+실제 차량 없이 에뮬레이터만으로 전체 기능 확인 가능. API 키·서버 설정 없이 바로 실행됨 (카카오 로그인은 시연용 mock).
 
 ## Install
 
 Pleos Connect 에뮬레이터 또는 차량에서만 설치됨 (`android.hardware.type.automotive` 필수).
 
 ```bash
-adb install -r apk/HDapp-debug.apk
+adb install -r apk/카로그랩_카로그_release.apk
 adb shell pm grant --user 10 com.hdapp android.car.permission.CAR_SPEED
 ```
+
+`CAR_SPEED` 권한은 앱 안에서 "차속 신호 없음 · 눌러서 허용"을 눌러도 받을 수 있음.
+
+## Build
+
+```bash
+./gradlew assembleRelease
+# → app/build/outputs/apk/release/app-release.apk
+```
+
+`local.properties`에 `sdk.dir`만 있으면 됨. 선택: `kakaoQrServer=`(실제 카카오 QR 서버, [server/kakao-qr](server/kakao-qr)), `adminPhones=`(관리자 번호).
 
 ## Usage
 
@@ -73,7 +100,7 @@ adb forward tcp:8088 tcp:8088
 
 ## Known issues
 
-- debug 서명 APK
+- release APK도 debug 키로 서명 (배포용 키 없음)
 - 카카오 QR 로그인, 보험사 전송 mock
 - 번호 로그인 SMS 인증 없음
 - 차선 변경은 steering 기반 추정 (차선 API 없음)

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 메인 화면 "운전 점수" 카드 아이콘: 앱 아이콘의 게이지를 카드 크기에 맞게 키운 것 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group android:scaleX="2" android:scaleY="2" android:pivotX="54" android:pivotY="54">
+    <!-- 바탕 원호 (270도) -->
+    <path
+        android:pathData="M39.86,68.14 A20,20 0 1,1 68.14,68.14"
+        android:strokeWidth="7"
+        android:strokeColor="#0B3D78"
+        android:strokeLineCap="round" />
+    <!-- 점수만큼 차오른 원호 -->
+    <path
+        android:pathData="M39.86,68.14 A20,20 0 1,1 72.79,47.16"
+        android:strokeWidth="7"
+        android:strokeColor="#00AAD2"
+        android:strokeLineCap="round" />
+    <!-- 바늘 -->
+    <path
+        android:pathData="M54,54 L66,45"
+        android:strokeWidth="4"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,54m-4,0a4,4 0 1,1 8,0a4,4 0 1,1 -8,0" />
+    </group>
+</vector>

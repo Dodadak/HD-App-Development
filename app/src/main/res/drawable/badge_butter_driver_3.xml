@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- badge_butter_driver_3 (받음) — 배지 디자인 SVG에서 변환 (scripts/svg2vd.py) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <path android:pathData="M32 49 7 34l5 20 19 11L8 56l9 18 19 4ZM88 49l25-15-5 20-19 11 23-9-9 18-19 4Z"
+        android:fillColor="#FFC56B" />
+    <path android:pathData="m36 80-7 29 15-7 9 10 7-29Z"
+        android:fillColor="#A5682E" />
+    <path android:pathData="m60 83 7 29 9-10 15 7-7-29Z"
+        android:fillColor="#FFC56B" />
+    <path android:pathData="m40 87-4 13 8-3 5 6 4-17M67 87l4 16 5-6 8 3-4-13"
+        android:strokeColor="#FFE2AD"
+        android:strokeWidth="2" />
+    <path android:pathData="m40 26-3-15 14 7L60 5l9 13 14-7-3 15Z"
+        android:fillColor="#FFC56B" />
+    <path android:pathData="m51 22 9-12 9 12"
+        android:strokeColor="#FFE2AD"
+        android:strokeWidth="2" />
+    <path android:pathData="M60.00,14.00L68.00,19.79L77.60,17.50L82.78,25.91L92.53,27.47L94.09,37.22L102.50,42.40L100.21,52.00L106.00,60.00L100.21,68.00L102.50,77.60L94.09,82.78L92.53,92.53L82.78,94.09L77.60,102.50L68.00,100.21L60.00,106.00L52.00,100.21L42.40,102.50L37.22,94.09L27.47,92.53L25.91,82.78L17.50,77.60L19.79,68.00L14.00,60.00L19.79,52.00L17.50,42.40L25.91,37.22L27.47,27.47L37.22,25.91L42.40,17.50L52.00,19.79Z"
+        android:fillColor="#FFC56B" />
+    <path android:pathData="M21.0,60.0a39.0,39.0 0 1,0 78.0,0a39.0,39.0 0 1,0 -78.0,0Z"
+        android:fillColor="#A5682E" />
+    <path android:pathData="M23.5,60.0a36.5,36.5 0 1,0 73.0,0a36.5,36.5 0 1,0 -73.0,0Z"
+        android:fillColor="#0F1A2A"
+        android:strokeColor="#FFE2AD"
+        android:strokeWidth="1.5" />
+    <path android:pathData="M27.5,60.0a32.5,32.5 0 1,0 65.0,0a32.5,32.5 0 1,0 -65.0,0Z"
+        android:strokeColor="#FFC56B"
+        android:strokeWidth="1.5" />
+    <path android:pathData="m20 22 2 5 5 2-5 2-2 5-2-5-5-2 5-2ZM100 81l2 4 4 2-4 2-2 4-2-4-4-2 4-2Z"
+        android:fillColor="#FFE2AD" />
+    <path android:pathData="m42 53 12-11 24 5-9 12Z"
+        android:fillColor="#7FDDF2" />
+    <path android:pathData="m42 53 27 6v16l-27-6Z"
+        android:fillColor="#E4DCD3" />
+    <path android:pathData="m69 59 9-12v17l-9 11Z"
+        android:fillColor="#E4DCD3"
+        android:fillAlpha="0.7" />
+    <path android:pathData="M39 79c7-6 12 6 20 0s13 6 22 0"
+        android:strokeColor="#E4DCD3"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+</vector>

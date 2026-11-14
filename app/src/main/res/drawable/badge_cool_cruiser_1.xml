@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- badge_cool_cruiser_1 (받음) — 배지 디자인 SVG에서 변환 (scripts/svg2vd.py) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <path android:pathData="M17.0,60.0a43.0,43.0 0 1,0 86.0,0a43.0,43.0 0 1,0 -86.0,0Z"
+        android:fillColor="#E4DCD3" />
+    <path android:pathData="M21.0,60.0a39.0,39.0 0 1,0 78.0,0a39.0,39.0 0 1,0 -78.0,0Z"
+        android:fillColor="#8E877F" />
+    <path android:pathData="M23.5,60.0a36.5,36.5 0 1,0 73.0,0a36.5,36.5 0 1,0 -73.0,0Z"
+        android:fillColor="#0F1A2A"
+        android:strokeColor="#F5EFE8"
+        android:strokeWidth="1.5" />
+    <path android:pathData="M28 49A34 34 0 0 1 69 27"
+        android:strokeColor="#F5EFE8"
+        android:strokeWidth="2"
+        android:strokeLineCap="round" />
+    <path android:pathData="M40 69A23 23 0 1 1 80 69"
+        android:strokeColor="#E4DCD3"
+        android:strokeWidth="6"
+        android:strokeLineCap="round" />
+    <path android:pathData="M73 43A23 23 0 0 1 83 60"
+        android:strokeColor="#7FDDF2"
+        android:strokeWidth="6"
+        android:strokeLineCap="round" />
+    <path android:pathData="m60 62 11-12"
+        android:strokeColor="#E4DCD3"
+        android:strokeWidth="5"
+        android:strokeLineCap="round" />
+    <path android:pathData="M55.0,63.0a5.0,5.0 0 1,0 10.0,0a5.0,5.0 0 1,0 -10.0,0Z"
+        android:fillColor="#E4DCD3" />
+    <path android:pathData="M49 77H71"
+        android:strokeColor="#E4DCD3"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+</vector>

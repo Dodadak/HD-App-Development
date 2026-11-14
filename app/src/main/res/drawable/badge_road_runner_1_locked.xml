@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- badge_road_runner_1 (잠김) — 배지 디자인 SVG에서 변환 (scripts/svg2vd.py) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <path android:pathData="M17.0,60.0a43.0,43.0 0 1,0 86.0,0a43.0,43.0 0 1,0 -86.0,0Z"
+        android:fillColor="#2A3C58" />
+    <path android:pathData="M21.0,60.0a39.0,39.0 0 1,0 78.0,0a39.0,39.0 0 1,0 -78.0,0Z"
+        android:fillColor="#1C2B40" />
+    <path android:pathData="M23.5,60.0a36.5,36.5 0 1,0 73.0,0a36.5,36.5 0 1,0 -73.0,0Z"
+        android:fillColor="#18263B"
+        android:strokeColor="#3A4D67"
+        android:strokeWidth="1.5" />
+    <path android:pathData="M28 49A34 34 0 0 1 69 27"
+        android:strokeColor="#3A4D67"
+        android:strokeWidth="2"
+        android:strokeLineCap="round" />
+    <path android:pathData="M51 41H57L50 79H37ZM63 41H69L83 79H70Z"
+        android:fillColor="#435571" />
+    <path android:pathData="M59 42H61L62 49H58ZM58 55H62L63 63H57ZM56 69H64L65 79H55Z"
+        android:fillColor="#435571" />
+</vector>

@@ -1,0 +1,137 @@
+{
+  "viewBox": [
+    0,
+    0,
+    120,
+    120
+  ],
+  "badges": [
+    {
+      "id": "badge_clean_streak_1",
+      "name": "클린 스트릭",
+      "tier": 1,
+      "earned": "earned/badge_clean_streak_1.svg",
+      "locked": "locked/badge_clean_streak_1.svg"
+    },
+    {
+      "id": "badge_clean_streak_2",
+      "name": "클린 스트릭",
+      "tier": 2,
+      "earned": "earned/badge_clean_streak_2.svg",
+      "locked": "locked/badge_clean_streak_2.svg"
+    },
+    {
+      "id": "badge_clean_streak_3",
+      "name": "클린 스트릭",
+      "tier": 3,
+      "earned": "earned/badge_clean_streak_3.svg",
+      "locked": "locked/badge_clean_streak_3.svg"
+    },
+    {
+      "id": "badge_road_runner_1",
+      "name": "로드 러너",
+      "tier": 1,
+      "earned": "earned/badge_road_runner_1.svg",
+      "locked": "locked/badge_road_runner_1.svg"
+    },
+    {
+      "id": "badge_road_runner_2",
+      "name": "로드 러너",
+      "tier": 2,
+      "earned": "earned/badge_road_runner_2.svg",
+      "locked": "locked/badge_road_runner_2.svg"
+    },
+    {
+      "id": "badge_road_runner_3",
+      "name": "로드 러너",
+      "tier": 3,
+      "earned": "earned/badge_road_runner_3.svg",
+      "locked": "locked/badge_road_runner_3.svg"
+    },
+    {
+      "id": "badge_cool_cruiser_1",
+      "name": "쿨 크루저",
+      "tier": 1,
+      "earned": "earned/badge_cool_cruiser_1.svg",
+      "locked": "locked/badge_cool_cruiser_1.svg"
+    },
+    {
+      "id": "badge_cool_cruiser_2",
+      "name": "쿨 크루저",
+      "tier": 2,
+      "earned": "earned/badge_cool_cruiser_2.svg",
+      "locked": "locked/badge_cool_cruiser_2.svg"
+    },
+    {
+      "id": "badge_cool_cruiser_3",
+      "name": "쿨 크루저",
+      "tier": 3,
+      "earned": "earned/badge_cool_cruiser_3.svg",
+      "locked": "locked/badge_cool_cruiser_3.svg"
+    },
+    {
+      "id": "badge_night_owl_1",
+      "name": "나이트 아울",
+      "tier": 1,
+      "earned": "earned/badge_night_owl_1.svg",
+      "locked": "locked/badge_night_owl_1.svg"
+    },
+    {
+      "id": "badge_night_owl_2",
+      "name": "나이트 아울",
+      "tier": 2,
+      "earned": "earned/badge_night_owl_2.svg",
+      "locked": "locked/badge_night_owl_2.svg"
+    },
+    {
+      "id": "badge_night_owl_3",
+      "name": "나이트 아울",
+      "tier": 3,
+      "earned": "earned/badge_night_owl_3.svg",
+      "locked": "locked/badge_night_owl_3.svg"
+    },
+    {
+      "id": "badge_butter_driver_1",
+      "name": "버터 드라이버",
+      "tier": 1,
+      "earned": "earned/badge_butter_driver_1.svg",
+      "locked": "locked/badge_butter_driver_1.svg"
+    },
+    {
+      "id": "badge_butter_driver_2",
+      "name": "버터 드라이버",
+      "tier": 2,
+      "earned": "earned/badge_butter_driver_2.svg",
+      "locked": "locked/badge_butter_driver_2.svg"
+    },
+    {
+      "id": "badge_butter_driver_3",
+      "name": "버터 드라이버",
+      "tier": 3,
+      "earned": "earned/badge_butter_driver_3.svg",
+      "locked": "locked/badge_butter_driver_3.svg"
+    },
+    {
+      "id": "badge_first_ignition_1",
+      "name": "첫 시동",
+      "tier": 1,
+      "earned": "earned/badge_first_ignition_1.svg",
+      "locked": "locked/badge_first_ignition_1.svg"
+    }
+  ],
+  "progressRing": {
+    "center": [
+      60,
+      60
+    ],
+    "radius": 56,
+    "strokeWidth": 3,
+    "startAngle": -90,
+    "direction": "clockwise",
+    "tierColors": [
+      "#E4DCD3",
+      "#00AAD2",
+      "#FFC56B"
+    ]
+  }
+}
